@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet" />
+		<title>Document</title>
+		<style>
+			/* button */
+			.button {
+				position: relative;
+				color: #ed1c24;
+				font-size: 14px;
+				font-family: "Roboto", sans-serif;
+				font-weight: 500;
+				line-height: 45px;
+				padding: 0 25px;
+				background-color: transparent;
+				border: none;
+				cursor: pointer;
+				overflow: visible;
+				text-transform: uppercase;
+				z-index: 1;
+			}
+
+			.button::after {
+				position: absolute;
+				content: "";
+				top: 0;
+				right: 0;
+				bottom: 0;
+				left: 0;
+				background-color: #ffffff;
+				border: 2px solid #ed1c24;
+				box-shadow: 2px 2px 4px hsla(0, 0%, 0%, 0.1);
+				border-radius: 9px 7px;
+				transform: skewX(-15deg);
+				z-index: -1;
+			}
+
+			.button:hover {
+				color: #fff;
+			}
+
+			.button:hover::after {
+				background-color: #ed1c24;
+			}
+
+			/* spiner */
+			.spiner {
+				display: inline-block;
+				position: relative;
+				color: #ffffff;
+				font-size: 16px;
+				font-family: "Roboto", sans-serif;
+				font-weight: 500;
+				line-height: 24px;
+				padding: 1px 10px 0;
+				background-color: transparent;
+				border: none;
+				overflow: visible;
+				z-index: 1;
+			}
+
+			.spiner::after {
+				position: absolute;
+				content: "";
+				top: 0;
+				right: 0;
+				bottom: 0;
+				left: 0;
+				background-color: #378039;
+				border-radius: 5px 4px;
+				transform: skewX(-15deg);
+				z-index: -1;
+			}
+
+			/* Не относится к делу */
+			body {
+				margin: 50px;
+			}
+			.w,
+			.g,
+			.b {
+				display: inline-block;
+				padding: 20px 50px;
+			}
+			.w {
+				background-color: white;
+			}
+			.g {
+				background-color: gray;
+			}
+			.b {
+				background-color: black;
+			}
+
+			.button_g {
+				color: #378039;
+			}
+			.button_g::after {
+				border-color: #378039;
+			}
+			.button_g:hover::after {
+				background-color: #378039;
+			}
+
+			.button_p {
+				color: #9c27b0;
+			}
+			.button_p::after {
+				border-color: #9c27b0;
+			}
+			.button_p:hover::after {
+				background-color: #9c27b0;
+			}
+		</style>
+	</head>
+	<body>
+		<button class="button">Все новости</button>
+		<button class="button button_g">Все новости</button>
+		<button class="button button_p">Все новости</button>
+		<hr style="margin: 20px 0;" />
+		<div class="w">
+			<span class="spiner">+55</span>
+		</div>
+		<div class="g">
+			<span class="spiner">+55</span>
+		</div>
+		<div class="b">
+			<span class="spiner">+55</span>
+		</div>
+	</body>
+</html>
